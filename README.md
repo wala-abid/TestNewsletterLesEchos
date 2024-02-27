@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting started
 
-## Getting Started
+Hello there, you are a new recruit in our frontend team at Les Echos, et your first task is to implement our newsletter page.
 
-First, run the development server:
+You can find the design on our figma: [Link]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Disclaimer
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Our evaluation focuses on your problem-solving approach and mindset, observing how you tackle challenges and prioritize tasks.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+During the interview, explain your decisions and how you'd approach unfinished tasks with you had more time.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+It's your thought process and strategy, rather than completion, that we're interested in.
 
-## Learn More
+# What is your mission ?
 
-To learn more about Next.js, take a look at the following resources:
+## Styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Regardless of point 1 and 2, the page should be responsive.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Implement the styling using what you like to use (chakra-ui, material-ui or something else)
+2. Implement the styling yourself, using the library of your choice (we are using styled-components and pandaCSS for instance)
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The current user will be representated by 3 different mock, you can find these at `src/mocks/user.ts`.
+What you need to look at is the `subscriptions` key, it represent the subscriptions that the user currently have active.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Implement a list of newsletters, grouped by site.
+
+You can find mocks of the items in `src/mocks/newsletters.ts`, you have to display the list of all the newsletters, but grouped by the `site` key.
+
+## The CTA must be different regarding the user's status
+
+In every newsletter object, you have a key `subcriptions`, which is an array of strings, it represents the right needed to access this newsletter.
+
+If the field is an empty array, it means the newsletter can be accessed by everyone, otherwise, the user should have at least of the right listed in the array.
+
+## Everything should be typed
+
+Everything has to be typed with typescript, show us what you can do !
+
+# Time
+
+Take around 4 to 8 hours to do this test, we respect your time and don't want you to spend days on this.
+
+# Final word
+
+Good luck and please do this as you were already an developer in our team.
