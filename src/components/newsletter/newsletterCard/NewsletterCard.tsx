@@ -25,7 +25,7 @@ function NewsletterCard({
         <Title>{title}</Title>
       </ImgBloc>
       <Description>{description}</Description>
-      <ButtonCard disabled={ctoStatus} ctoStatus={ctoStatus}>
+      <ButtonCard ctostatus={ctoStatus.toString()}>
         {ctoStatus ? "S'inscrire" : "S'abonner"}
       </ButtonCard>
     </CardWrapper>
