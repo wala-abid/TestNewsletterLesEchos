@@ -2,6 +2,7 @@
 import { NEWSLETTER_ITEMS } from "@/mocks/newsletters";
 import { USER_WITH_ONE_SUBSCRIPTION } from "@/mocks/user";
 import { NewsletterItemType, UserType } from "@/types/type";
+import { groupNewsletterBySite } from "@/utils/utils";
 import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 import NewsletterCard from "../newsletter/newsletterCard/NewsletterCard";
@@ -20,11 +21,11 @@ const Newsletter = () => {
   const [currentUser, setCurrentUser] = useState<UserType>(
     USER_WITH_ONE_SUBSCRIPTION
   );
-
-  const groupBySite = Object.groupBy(
-    NEWSLETTER_ITEMS.flat(1),
-    (newsletter: NewsletterItemType) => newsletter.site
-  );
+  // const groupBySite = Object.groupBy(
+  //   NEWSLETTER_ITEMS.flat(1),
+  //   (newsletter: NewsletterItemType) => newsletter.site
+  // );
+  const groupBySite = groupNewsletterBySite(NEWSLETTER_ITEMS.flat(1));
 
   const ctoValue = (newsletter: NewsletterItemType) =>
     currentUser.subscriptions.some((sub) =>

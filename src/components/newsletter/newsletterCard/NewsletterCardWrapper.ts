@@ -30,13 +30,15 @@ export const CardWrapper = styled.div`
   height: 350px;
   gap: 16px;
 `;
-
-export const ButtonCard = styled.button<{ ctoStatus?: boolean }>`
-  border-radius: 40px;
+interface ButtonCardProps {
+  ctostatus: string;
+}
+export const ButtonCard = styled.button<ButtonCardProps>`
+  border-radius: calc(infinity * 1px);
   border: none;
   cursor: pointer;
-  background: ${(props) => (props.ctoStatus ? "#B00005" : "#FAEC70")};
-  color: ${(props) => (props.ctoStatus ? "white" : "#212121")};
+  background: ${(props) => (props.ctostatus ? "#B00005" : "#FAEC70")};
+  color: ${(props) => (props.ctostatus ? "white" : "#212121")};
   padding: 14px 30px;
   position: absolute;
   bottom: 20px;
